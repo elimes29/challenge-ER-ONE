@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+        <link
+      href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Encriptador</title>
+  </head>
+
+  <body>
+    <div class="contenedor_general">
+      <div class="contenedor_titulo">
+        <h1 id="titulo">Encriptador de palabras</h1>
+      </div>
+
+      <div class="contenedor_app">
+        <div class="contenedor_entrada">
+
+          <textarea type="text" class="contenedor_input" id="input_entrada" placeholder="ingresa tu mensaje aquí"></textarea>
+        
+          <p class="mensaje">Solo letras minusculas y sin acentos</p>
+
+          <div class="contenedor_botones">
+            <div id="contenedor_boton_1">
+              <button class="contenedor_boton" onclick="encripta()" type="button">Encriptar</button>
+            </div>
+            <div id="contenedor_boton_2">
+              <button class="contenedor_boton_desencripta" type="button" onclick="desencripta()">Desencriptar</button>
+            </div>
+          </div>
+        
+        </div>
+        <div class="contenedor_salida" id="miDiv">
+          <textarea type="text" class="contenedor_input" id="input_salida" ></textarea>
+          <p class="mensaje_salida"></p>
+          <div id="contenedor_boton_3">
+            <button class="contenedor_boton" onclick="seleccionarTexto()" type="button">Copiar</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <footer class="pie_pagina">
+      <h3>Desarrollado por: Elimes Rodríguez</h3>
+    </footer>
+
+
+
+    <script src="app.js"></script>
+  </body>
+</html>
