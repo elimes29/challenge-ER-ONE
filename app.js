@@ -1,5 +1,3 @@
-
-
 function limpiaImput() {
   document.querySelector("#valorUsuario").value = "";
   return;
@@ -42,9 +40,9 @@ function encripta() {
   salida.value = textoSalidaCadena;
 
   //eliminamos el texto de entrada
-  document.getElementById("input_entrada").value="";
+  document.getElementById("input_entrada").value = "";
 
-  activarDiv();
+  /*activarDiv();*/
 }
 
 //funcion que realiza la desencriptación
@@ -94,7 +92,6 @@ function desencripta() {
 
   let salida = document.getElementById("input_salida");
   salida.value = textoSalidaCadena;
-
 }
 
 function seleccionarTexto() {
@@ -102,6 +99,21 @@ function seleccionarTexto() {
   input.select();
 }
 
+/*
+function toggleDivs() {
+  const triggerInput = document.getElementById("input_entrada");
+  const div1 = document.getElementById("inicial");
+  const div2 = document.getElementById("resto");
 
+  if (triggerInput.value.trim() === "") {
+    div1.style.display = "block";
+    div2.style.display = "none";
+  } else {
+    div1.style.display = "none";
+    div2.style.display = "block";
+  }
+}
 
-
+// Inicializa el estado al cargar la página
+toggleDivs();
+*/

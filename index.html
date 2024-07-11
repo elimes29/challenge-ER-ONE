@@ -2,52 +2,85 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-        <link
+    <link
       href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/style/style.css" />
     <title>Encriptador</title>
   </head>
-
   <body>
-    <div class="contenedor_general">
-      <div class="contenedor_titulo">
-        <h1 id="titulo">Encriptador de palabras</h1>
+    <header class="encabezado"></header>
+
+    <main class="contenedor">
+      <div class="contenedor__logo">
+        <img src="/assets/Logo.png" />
       </div>
 
-      <div class="contenedor_app">
-        <div class="contenedor_entrada">
+      <section class="contenedor__entrada">
+        <!--
+        <input
+          id="input_entrada"
+          class="contenedor__entrada__texto"
+          placeholder="Ingrese el texto aquí"
+        >
+      </input>
+-->
+        <textarea
+          type="text"
+          id="input_entrada"
+          class="contenedor__entrada__texto"
+          placeholder="ingresa tu mensaje aquí"
+        ></textarea>
 
-          <textarea type="text" class="contenedor_input" id="input_entrada" placeholder="ingresa tu mensaje aquí"></textarea>
-        
-          <p class="mensaje">Solo letras minusculas y sin acentos</p>
-
-          <div class="contenedor_botones">
-            <div id="contenedor_boton_1">
-              <button class="contenedor_boton" onclick="encripta()" type="button">Encriptar</button>
-            </div>
-            <div id="contenedor_boton_2">
-              <button class="contenedor_boton_desencripta" type="button" onclick="desencripta()">Desencriptar</button>
-            </div>
-          </div>
-        
+        <div class="contenedor__entrada__info">
+          <img src="/assets/bi_exclamation-circle-fill.png" />
+          <p>Solo letras minúsculas y sin acentos</p>
         </div>
-        <div class="contenedor_salida" id="miDiv">
-          <textarea type="text" class="contenedor_input" id="input_salida" ></textarea>
-          <p class="mensaje_salida"></p>
-          <div id="contenedor_boton_3">
-            <button class="contenedor_boton" onclick="seleccionarTexto()" type="button">Copiar</button>
+        <div class="contenedor__entrada__botones">
+          <button onclick="encripta()" class="contenedor__entrada__boton1">
+            Encriptar
+          </button>
+          <button onclick="desencripta()" class="contenedor__entrada__boton2">
+            Desencriptar
+          </button>
+        </div>
+      </section>
+
+      <div class="contenedor__salida">
+        <!--
+        <div id="inicial">
+          <img class="contenedor__salida__imagen" src="/assets/Muñeco.png" />
+          <div class="contenedor__salida__mensajes">
+            <p class="contenedor__salida__mensaje1">
+              Ningún mensaje fue encontrado
+            </p>
+            <p class="contenedor__salida__mensaje2">
+              Ingresa el texto que desees encriptar o desencriptar.
+            </p>
           </div>
+        </div>
+
+        -->
+        <div class="contenedor__salida" id="resto">
+          <textarea
+            type="text"
+            id="input_salida"
+            class="contenedor__salida__texto"
+          ></textarea>
+          <button
+            onclick="seleccionarTexto()"
+            class="contenedor__salida__boton"
+          >
+            Copiar
+          </button>
         </div>
       </div>
+    </main>
 
-    </div>
     <footer class="pie_pagina">
       <h3>Desarrollado por: Elimes Rodríguez</h3>
     </footer>
-
-
 
     <script src="app.js"></script>
   </body>
