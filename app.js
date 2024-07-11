@@ -99,21 +99,20 @@ function seleccionarTexto() {
   input.select();
 }
 
-/*
-function toggleDivs() {
-  const triggerInput = document.getElementById("input_entrada");
-  const div1 = document.getElementById("inicial");
-  const div2 = document.getElementById("resto");
 
-  if (triggerInput.value.trim() === "") {
-    div1.style.display = "block";
-    div2.style.display = "none";
+function toggleDivs() {
+  const inputEntrada = document.getElementById('input_entrada');
+  const divInicial = document.getElementById('inicial');
+  const divResto = document.getElementById('resto');
+
+  if (inputEntrada.value.trim() === "") {
+      divInicial.style.display = 'block';
+      divResto.style.display = 'none';
   } else {
-    div1.style.display = "none";
-    div2.style.display = "block";
+      divInicial.style.display = 'none';
+      divResto.style.display = 'block';
   }
 }
 
 // Inicializa el estado al cargar la página
-toggleDivs();
-*/
+document.addEventListener('DOMContentLoaded', toggleDivs);

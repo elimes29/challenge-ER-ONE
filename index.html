@@ -31,6 +31,7 @@
           id="input_entrada"
           class="contenedor__entrada__texto"
           placeholder="ingresa tu mensaje aquí"
+          oninput="toggleDivs()"
         ></textarea>
 
         <div class="contenedor__entrada__info">
@@ -48,7 +49,7 @@
       </section>
 
       <div class="contenedor__salida">
-        <!--
+
         <div id="inicial">
           <img class="contenedor__salida__imagen" src="/assets/Muñeco.png" />
           <div class="contenedor__salida__mensajes">
@@ -61,7 +62,6 @@
           </div>
         </div>
 
-        -->
         <div class="contenedor__salida" id="resto">
           <textarea
             type="text"
