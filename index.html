@@ -2,21 +2,16 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="/style/style.css" />
     <title>Encriptador</title>
   </head>
   <body>
     <header class="encabezado"></header>
-
     <main class="contenedor">
       <div class="contenedor__logo">
         <img src="/assets/Logo.png" />
       </div>
-
       <section class="contenedor__entrada">
         <textarea
           type="text"
@@ -25,87 +20,32 @@
           placeholder="ingresa tu mensaje aquí"
           oninput="toggleDivs()"
         ></textarea>
-
         <div class="contenedor__entrada__info">
           <img src="/assets/bi_exclamation-circle-fill.png" />
           <p>Solo letras minúsculas y sin acentos</p>
         </div>
         <div class="contenedor__entrada__botones">
-          <button onclick="encripta()" class="contenedor__entrada__boton1">
-            Encriptar
-          </button>
-          <button onclick="desencripta()" class="contenedor__entrada__boton2">
-            Desencriptar
-          </button>
+          <button onclick="encripta()" class="contenedor__entrada__boton1">Encriptar</button>
+          <button onclick="desencripta()" class="contenedor__entrada__boton2">Desencriptar</button>
         </div>
       </section>
-      <!--
       <section class="contenedor__salida">
         <div class="contenedor__salida2" id="inicial">
           <img class="contenedor__salida__imagen" src="/assets/Muñeco.png" />
           <div class="contenedor__salida__mensajes">
-            <p class="contenedor__salida__mensaje1">
-              Ningún mensaje fue encontrado
-            </p>
-            <p class="contenedor__salida__mensaje2">
-              Ingresa el texto que desees encriptar o desencriptar.
-            </p>
+            <p class="contenedor__salida__mensaje1">Ningún mensaje fue encontrado</p>
+            <p class="contenedor__salida__mensaje2">Ingresa el texto que desees encriptar o desencriptar.</p>
           </div>
         </div>
-
         <div class="contenedor__salida2" id="resto">
-          <input
-            type="text"
-            id="input_salida"
-            class="contenedor__salida__texto"
-          ></input>
-          <button
-            onclick="seleccionarTexto()"
-            class="contenedor__salida__boton"
-          >
-            Copiar
-          </button>
+          <textarea id="input_salida" class="contenedor__salida__texto"></textarea>
+          <button onclick="seleccionarTexto()" class="contenedor__salida__boton">Copiar</button>
         </div>
       </section>
--->
-      <!--de chat gpt-->
-      <section class="contenedor__salida">
-        <div class="contenedor__salida2" id="inicial">
-          <img class="contenedor__salida__imagen" src="/assets/Muñeco.png" />
-          <div class="contenedor__salida__mensajes">
-            <p class="contenedor__salida__mensaje1">
-              Ningún mensaje fue encontrado
-            </p>
-            <p class="contenedor__salida__mensaje2">
-              Ingresa el texto que desees encriptar o desencriptar.
-            </p>
-          </div>
-        </div>
-
-        <div class="contenedor__salida2" id="resto">
-          <textarea
-            type="text"
-            id="input_salida"
-            class="contenedor__salida__texto"
-          ></textarea>
-          <button
-            onclick="seleccionarTexto()"
-            class="contenedor__salida__boton"
-          >
-            Copiar
-          </button>
-        </div>
-      </section>
-
-      <!--fin de chat GPT-->
     </main>
-
     <footer class="pie_pagina">
-      <h3>
-        Desarrollado por: Elimes Rodríguez para ALURA en curso ONE de Oracle
-      </h3>
+      <h3>Desarrollado por: Elimes Rodríguez para ALURA en curso ONE de Oracle</h3>
     </footer>
-
     <script src="app.js"></script>
   </body>
 </html>
