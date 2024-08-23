@@ -16,7 +16,15 @@
     box-sizing: border-box;
 }
 
+.container {
+    min-height: 100dvh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
 body {
+    margin: 0;
+    padding: 0;
     background-color: var(--color-primario);
     color: var(--color-secundario);
     font-family: var(--fuente-primaria);
